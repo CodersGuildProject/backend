@@ -1,12 +1,12 @@
 
 # Import Firebase REST API library
-import firebase
+import pyrebase
 
 
 # Firebase configuration
 
 firebase_config={
-    "apiKey": "AIzaSyBU1NjGLLYywNErl5pcNFxRzi6pC2mcguA",
+  "apiKey": "AIzaSyBU1NjGLLYywNErl5pcNFxRzi6pC2mcguA",
 
   "authDomain": "codersguild13.firebaseapp.com",
 
@@ -22,9 +22,5 @@ firebase_config={
   "databaseURL" : ""
 
 }
-# Instantiates a Firebase app
-app = firebase.initialize_app(firebase_config)
-
-
-# Firebase Authentication
-auth = app.auth()
+firebase=pyrebase.initialize_app(firebase_config)
+auth = firebase.auth()
